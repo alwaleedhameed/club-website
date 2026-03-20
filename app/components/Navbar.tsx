@@ -10,9 +10,9 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="bg-indigo-800 text-white shadow-md">
+    <nav className="bg-black border-b border-red-800 text-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-        <Link to="/" className="text-xl font-bold tracking-tight hover:text-indigo-200 transition-colors">
+        <Link to="/" className="text-xl font-bold tracking-tight text-red-500 hover:text-red-400 transition-colors">
           UniCode Club
         </Link>
         <ul className="flex gap-6">
@@ -20,10 +20,10 @@ export function Navbar() {
             <li key={to}>
               <Link
                 to={to}
-                className={`text-sm font-medium transition-colors hover:text-indigo-200 ${
+                className={`text-sm font-medium transition-colors hover:text-red-400 ${
                   location.pathname === to
-                    ? "border-b-2 border-indigo-300 pb-0.5"
-                    : ""
+                    ? "border-b-2 border-red-500 pb-0.5 text-red-400"
+                    : "text-gray-300"
                 }`}
               >
                 {label}

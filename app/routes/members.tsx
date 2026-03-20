@@ -23,19 +23,19 @@ const members = [
 
 export default function Members() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
 
-      <section className="bg-indigo-800 text-white py-14 px-4 text-center">
+      <section className="bg-black border-b border-red-900 text-white py-14 px-4 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight mb-2">
           Our Members
         </h1>
-        <p className="text-indigo-200 text-lg">
+        <p className="text-gray-400 text-lg">
           The talented people who make UniCode Club great.
         </p>
       </section>
 
-      <section className="py-16 px-4 flex-1">
+      <section className="py-16 px-4 flex-1 bg-gray-950">
         <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {members.map((member) => (
             <div
@@ -43,17 +43,17 @@ export default function Members() {
               className="flex flex-col items-center text-center gap-3"
             >
               {/* Photo placeholder */}
-              <div className="w-24 h-24 rounded-full bg-indigo-100 border-2 border-indigo-300 flex items-center justify-center text-indigo-400 text-3xl font-bold select-none">
+              <div className="w-24 h-24 rounded-full bg-gray-900 border-2 border-red-700 flex items-center justify-center text-red-500 text-3xl font-bold select-none">
                 {member.name
                   .split(" ")
                   .map((n) => n[0])
                   .join("")}
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-sm leading-tight">
+                <p className="font-semibold text-white text-sm leading-tight">
                   {member.name}
                 </p>
-                <p className="text-indigo-700 text-xs font-medium mt-0.5">
+                <p className="text-red-500 text-xs font-medium mt-0.5">
                   {member.position}
                 </p>
               </div>
@@ -62,7 +62,7 @@ export default function Members() {
         </div>
       </section>
 
-      <footer className="bg-indigo-900 text-indigo-300 text-center text-sm py-6">
+      <footer className="bg-black border-t border-red-900 text-gray-500 text-center text-sm py-6">
         © {new Date().getFullYear()} UniCode Club · All rights reserved
       </footer>
     </div>

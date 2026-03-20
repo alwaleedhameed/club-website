@@ -31,28 +31,28 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
 
-      <section className="bg-indigo-800 text-white py-14 px-4 text-center">
+      <section className="bg-black border-b border-red-900 text-white py-14 px-4 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight mb-2">
           Our Projects
         </h1>
-        <p className="text-indigo-200 text-lg">
+        <p className="text-gray-400 text-lg">
           Real-world software built by club members.
         </p>
       </section>
 
-      <section className="py-16 px-4 flex-1">
+      <section className="py-16 px-4 flex-1 bg-gray-950">
         <div className="max-w-4xl mx-auto flex flex-col gap-12">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col md:flex-row"
+              className="bg-black rounded-2xl border border-red-900 shadow-sm overflow-hidden flex flex-col md:flex-row hover:border-red-600 transition-colors"
             >
               {/* Photo placeholder */}
-              <div className="md:w-64 w-full h-48 md:h-auto bg-indigo-100 flex items-center justify-center shrink-0">
-                <div className="flex flex-col items-center gap-2 text-indigo-400">
+              <div className="md:w-64 w-full h-48 md:h-auto bg-gray-900 flex items-center justify-center shrink-0">
+                <div className="flex flex-col items-center gap-2 text-red-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-12 h-12"
@@ -67,24 +67,24 @@ export default function Projects() {
                       d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3 3h18"
                     />
                   </svg>
-                  <span className="text-xs font-medium">Project Screenshot</span>
+                  <span className="text-xs font-medium text-gray-500">Project Screenshot</span>
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-8 flex flex-col justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                  <h2 className="text-2xl font-bold text-white mb-2">
                     {project.title}
                   </h2>
-                  <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                  <p className="text-gray-400 leading-relaxed text-sm mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full border border-indigo-200"
+                        className="bg-gray-900 text-red-400 text-xs font-medium px-3 py-1 rounded-full border border-red-900"
                       >
                         {t}
                       </span>
@@ -95,7 +95,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-700 hover:underline"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-red-500 hover:text-red-400 hover:underline"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <footer className="bg-indigo-900 text-indigo-300 text-center text-sm py-6">
+      <footer className="bg-black border-t border-red-900 text-gray-500 text-center text-sm py-6">
         © {new Date().getFullYear()} UniCode Club · All rights reserved
       </footer>
     </div>
